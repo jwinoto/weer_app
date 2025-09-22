@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <title>Het Weerbericht</title>
+        <meta charset="utf-8">
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <style>
+            body {  
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'roboto', sans-serif;
+                background-color: whitesmoke;
+            }
+
+            #container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background: linear-gradient(135deg, rgb(42, 113, 137), rgb(177, 195, 201));
+                border-radius: 8px;
+                box-shadow: 0px 10px 13px -7px #000000;
+            }
+
+            #divZoekWeer {
+                width: 400px;
+                min-height: 50px;
+                background-color: lightblue;
+                
+                margin: 5px;
+                padding: 10px;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+            #toonWeerBericht {
+                display: none;
+                flex-direction: column;
+                width: 400px;
+                min-height: 0;               
+                color: white;
+                border-radius: 10px;
+                padding: 5px;
+            }           
+
+            #eersteRegel {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                text-align: center;
+                gap: 10px;
+                
+            }
+
+            #tweedeRegel {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;                
+                gap: 10px;
+                padding: 10px;
+            }
+
+            #derdeRegel {
+                display: flex;  
+                flex-direction: row; 
+                justify-content: space-between;                           
+                margin: 10px;                
+            }
+
+            #divAlert {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding-bottom: 40px;
+                color: rgb(72, 22, 22);
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            #btnWeer {
+                background-color: transparent;
+                
+                border: none;
+            }
+
+            svg{
+                fill: black;
+                height: 18px;
+                width: 18px;
+                margin-left: 5px;
+                align-items: center;
+            }
+
+            #txtPlaats {
+                width: 200px;
+                font-size: 16px;                
+                border-radius: 5px;               
+            }
+        </style>
+    </head>
+    <body>
+        <div id="divTitel">
+            <h1>Het Weer App</h1>
+        </div>
+
+        <div id="container">
+        <div id="divZoekWeer">
+            
+            <input type="text" id="txtPlaats" placeholder="Typ hier een plaats">
+            <button id="btnWeer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <!--!Font Awesome Free v7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                    <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
+                </svg>
+            </button>
+        </div>
+
+        <div id="toonWeerBericht">
+            <div id="eersteRegel">
+                <div id="divPlaats"></div>
+                <div id="divDatum"></div>
+            </div>
+
+            <div id="tweedeRegel">
+                <div id="divTemp"></div>
+            </div>
+            
+            <div id="derdeRegel">
+                
+                <div id="divWind"></div>
+                <div id="divVochtigheid"></div>
+            </div>
+            <div id="divAlert"></div>
+
+        </div>
+        
+        </div>
+           <script src="script12-3.js"></script>
+    </body>    
+    
