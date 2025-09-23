@@ -18,7 +18,7 @@
                 box-sizing: border-box;
                 font-family: 'roboto', sans-serif;
                 background-color: whitesmoke;
-               
+                
             }
 
             #container {
@@ -29,10 +29,11 @@
                 background: linear-gradient(135deg, rgb(42, 113, 137), rgb(177, 195, 201));
                 border-radius: 8px;
                 box-shadow: 0px 10px 13px -7px #000000;
+                min-width: 50%;
             }
 
             #divZoekWeer {
-                width: 400px;
+                width: 95%;
                 min-height: 50px;
                 background-color: lightblue;
                 
@@ -49,7 +50,7 @@
             #toonWeerBericht {
                 display: none;
                 flex-direction: column;
-                width: 400px;
+                width: 95%;
                 min-height: 0;               
                 color: white;
                 border-radius: 10px;
@@ -107,18 +108,24 @@
             }
 
             #txtPlaats {
-                width: 200px;
+                width: 90%;
                 font-size: 16px;                
                 border-radius: 5px;               
             }
 
             @media screen and (max-width:600px){
-                #divZoekWeer {
-                    max-width: 320px;
+                .container {
+                    max-width: 100vw;
+                    
                 }
+                #divZoekWeer{
+                    max-width: 90%;
 
+                }
+                
                 #toonWeerBericht {
-                    max-width: 320px;
+                    max-width: 95%;
+                    font-size: 0.75rem;
                 }
             }
         </style>
