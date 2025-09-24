@@ -17,7 +17,9 @@
                 padding: 0;
                 box-sizing: border-box;
                 font-family: 'roboto', sans-serif;
-                background-color: whitesmoke;
+                background-image: url('background.jpg');
+                background-size: cover;
+                
                 
             }
 
@@ -29,15 +31,15 @@
                 background: linear-gradient(135deg, rgb(42, 113, 137), rgb(177, 195, 201));
                 border-radius: 8px;
                 box-shadow: 0px 10px 13px -7px #000000;
-                min-width: 50%;
+                min-width: 40%;
             }
 
             #divZoekWeer {
                 width: 95%;
                 min-height: 50px;
-                background-color: lightblue;
+               
                 
-                margin: 5px;
+                margin: 10px;
                 padding: 10px;
                 border-radius: 10px;
                 display: flex;
@@ -50,7 +52,7 @@
             #toonWeerBericht {
                 display: none;
                 flex-direction: column;
-                width: 95%;
+                width: 90%;
                 min-height: 0;               
                 color: white;
                 border-radius: 10px;
@@ -108,31 +110,37 @@
             }
 
             #txtPlaats {
-                width: 90%;
+                width: 85%;
                 font-size: 16px;                
                 border-radius: 5px;               
             }
 
+            
+
             @media screen and (max-width:600px){
                 .container {
-                    max-width: 100vw;
+                    max-width: 100%;
                     
                 }
                 #divZoekWeer{
                     max-width: 90%;
-
+                    margin: 8px;
                 }
                 
                 #toonWeerBericht {
-                    max-width: 95%;
+                    max-width: 90%;
                     font-size: 0.75rem;
                 }
             }
         </style>
     </head>
     <body>
+        
+            
+           
+       
         <div id="divTitel">
-            <h1>Het Weer App</h1>
+            <h1>Weerapp</h1>
         </div>
 
         <div id="container">
